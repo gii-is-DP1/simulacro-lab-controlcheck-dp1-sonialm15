@@ -27,7 +27,7 @@ public class ProductTypeFormatter implements Formatter<ProductType>{
 
     @Override
     public ProductType parse(String text, Locale locale) throws ParseException {
-    	Collection<ProductType> findProductTypes = this.productService.findAllProductTypes();
+    	Collection<ProductType> findProductTypes = this.productService.getAllProductTypes();
 		for (ProductType type : findProductTypes) {
 			if (type.getName().equals(text)) {
 				return type;
